@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "4415e406-e63c-40e1-a33d-be57a45ed2e8",
+		"name": "Mockapi.io",
+		"description": "E-commerce website to test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47829381",
+		"_collection_link": "https://noha-haydak-s-team.postman.co/workspace/Noha-Haydak's-Workspace~59a13305-ec49-4fc1-8d16-b0f41afb7291/collection/47829381-4415e406-e63c-40e1-a33d-be57a45ed2e8?action=share&source=collection_link&creator=47829381"
+	},
+	"item": [
+		{
+			"name": "GET all Accounts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get All Accounts\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Account",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account info by its name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Found the account name\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Account?name=Margaret Walker",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Account"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Margaret Walker"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonScript=pm.response.json();\r",
+							"var accountId=jsonScript.id;\r",
+							"pm.environment.set(\"AccountId\", accountId);\r",
+							"\r",
+							"pm.test(\"New account has been created\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"createdAt\": \"2025-09-03T14:49:41.101Z\",\r\n        \"name\": \"Noha Haydak\",\r\n        \"avatar\": \"https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/999/46.jpg\",\r\n        \"adress\": \"Egypt\",\r\n        \"music\": \"Awel mara theb ya alby\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Account",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify some info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Modify music of this account\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n\r\n        \"music\": \"bnadek t3ala\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Account/{{AccountId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Account",
+						"{{AccountId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the recently added account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Delet account\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n\r\n        \"music\": [\"bnadek t3ala\"]\r\n    }"
+				},
+				"url": {
+					"raw": "{{url}}/Account/{{AccountId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Account",
+						"{{AccountId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make sure account is deleted",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Make sure account is deleted\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Account/{{AccountId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Account",
+						"{{AccountId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

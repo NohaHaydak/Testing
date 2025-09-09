@@ -1,0 +1,208 @@
+{
+	"id": "01785d8e-c34e-4bc9-b0a2-32ea027e649d",
+	"name": "Mockapi.io",
+	"timestamp": "2025-09-09T15:09:57.805Z",
+	"collection_id": "47829381-4415e406-e63c-40e1-a33d-be57a45ed2e8",
+	"folder_id": 0,
+	"environment_id": "47829381-d51174bf-89f5-4e5a-a67f-521babc1a6f6",
+	"totalPass": 6,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-09-09T15:09:55.837Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "f35f0eb1-b064-41ac-880f-ade15b1e6ad8",
+			"name": "GET all Accounts",
+			"url": "https://68b81ba3b715405043271c19.mockapi.io/Mazika/api/v1/Account",
+			"time": 148,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Get All Accounts": true
+			},
+			"testPassFailCounts": {
+				"Get All Accounts": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				148
+			],
+			"allTests": [
+				{
+					"Get All Accounts": true
+				}
+			]
+		},
+		{
+			"id": "23973aaf-190c-4e7c-8f39-122a9fb48da3",
+			"name": "Get account info by its name",
+			"url": "https://68b81ba3b715405043271c19.mockapi.io/Mazika/api/v1/Account?name=Margaret Walker",
+			"time": 273,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Found the account name": true
+			},
+			"testPassFailCounts": {
+				"Found the account name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				273
+			],
+			"allTests": [
+				{
+					"Found the account name": true
+				}
+			]
+		},
+		{
+			"id": "f01ef5a1-90b5-46d0-9ffe-e8d2d7fe9117",
+			"name": "Add new account",
+			"url": "https://68b81ba3b715405043271c19.mockapi.io/Mazika/api/v1/Account",
+			"time": 159,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"New account has been created": true
+			},
+			"testPassFailCounts": {
+				"New account has been created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"New account has been created": true
+				}
+			]
+		},
+		{
+			"id": "61b1d2b3-df8b-46e8-85d1-6344997942cf",
+			"name": "Modify some info",
+			"url": "https://68b81ba3b715405043271c19.mockapi.io/Mazika/api/v1/Account/5",
+			"time": 178,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Modify music of this account": true
+			},
+			"testPassFailCounts": {
+				"Modify music of this account": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				178
+			],
+			"allTests": [
+				{
+					"Modify music of this account": true
+				}
+			]
+		},
+		{
+			"id": "42c1637b-aa08-4e03-9b11-c65c66313212",
+			"name": "Delete the recently added account",
+			"url": "https://68b81ba3b715405043271c19.mockapi.io/Mazika/api/v1/Account/5",
+			"time": 146,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Delet account": true
+			},
+			"testPassFailCounts": {
+				"Delet account": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				146
+			],
+			"allTests": [
+				{
+					"Delet account": true
+				}
+			]
+		},
+		{
+			"id": "f28ff3d2-7901-4635-97e3-fc41fef318e4",
+			"name": "Make sure account is deleted",
+			"url": "https://68b81ba3b715405043271c19.mockapi.io/Mazika/api/v1/Account/5",
+			"time": 153,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Make sure account is deleted": true
+			},
+			"testPassFailCounts": {
+				"Make sure account is deleted": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				153
+			],
+			"allTests": [
+				{
+					"Make sure account is deleted": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1057,
+	"collection": {
+		"requests": [
+			{
+				"id": "f35f0eb1-b064-41ac-880f-ade15b1e6ad8",
+				"method": "GET"
+			},
+			{
+				"id": "23973aaf-190c-4e7c-8f39-122a9fb48da3",
+				"method": "GET"
+			},
+			{
+				"id": "f01ef5a1-90b5-46d0-9ffe-e8d2d7fe9117",
+				"method": "POST"
+			},
+			{
+				"id": "61b1d2b3-df8b-46e8-85d1-6344997942cf",
+				"method": "PUT"
+			},
+			{
+				"id": "42c1637b-aa08-4e03-9b11-c65c66313212",
+				"method": "DELETE"
+			},
+			{
+				"id": "f28ff3d2-7901-4635-97e3-fc41fef318e4",
+				"method": "GET"
+			}
+		]
+	}
+}
