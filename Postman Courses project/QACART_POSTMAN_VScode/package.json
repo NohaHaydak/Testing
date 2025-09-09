@@ -1,0 +1,21 @@
+{
+  "name": "qacart_postman",
+  "version": "1.0.0",
+  "description": "to test api using postman",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "overrides": {
+    "jsonwebtoken": "^9.0.2"
+  }
+}
