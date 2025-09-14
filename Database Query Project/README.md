@@ -1,41 +1,46 @@
-## TASK:
-Return the customers(customer_id, customer_name, categories_count, categories_list, totalspent) who bought items from more than one category.
+# TASK
+
+Return the customers (customer_id, customer_name, categories_count, categories_list, totalspent) who bought items from more than one category.
 
 ---
 
-## SCHEME of the provided data base was as shown below:
+## SCHEMA of the provided database
+
 Tables
 ├── categories
-│   ├── id
-│   └── name
+│ ├── id
+│ └── name
 ├── customers
-│   ├── id
-│   ├── name
-│   ├── email
-│   └── created_at
+│ ├── id
+│ ├── name
+│ ├── email
+│ └── created_at
 ├── order_items
-│   ├── id
-│   ├── order_id
-│   ├── product_id
-│   ├── quantity
-│   └── unit_price
+│ ├── id
+│ ├── order_id
+│ ├── product_id
+│ ├── quantity
+│ └── unit_price
 ├── orders
-│   ├── id
-│   ├── customer_id
-│   ├── order_date
-│   └── status
+│ ├── id
+│ ├── customer_id
+│ ├── order_date
+│ └── status
 ├── products
-│   ├── id
-│   ├── sku
-│   ├── name
-│   ├── category_id
-│   ├── supplier_id
-│   ├── price
-│   └── stock
+│ ├── id
+│ ├── sku
+│ ├── name
+│ ├── category_id
+│ ├── supplier_id
+│ ├── price
+│ └── stock
 └── suppliers
-    ├── id
-    ├── name
-    └── country
+├── id
+├── name
+└── country
+
+
+
 ---
 
 ## 1. categories
@@ -122,11 +127,11 @@ Tables
 
 ## SQL Query Results
 
-| customer_id | customer_name | categories_count | categories_list                | totalspent |
-|-------------|---------------|------------------|--------------------------------|------------|
-| 1           | Ahmed Ali     | 2                | Electronics, Furniture         | 1250.00    |
-| 2           | Sara Mohamed  | 3                | Clothing, Electronics, Grocery | 980.50     |
-| 3           | Mahmoud Nabil | 2                | Grocery, Toys                  | 410.00     |
+| customer_id | customer_name | categories_count | categories_list                   | totalspent |
+|-------------|---------------|------------------|-----------------------------------|------------|
+| 1           | Fatma Al-Harbi| 2                | Electronics,Grocery               | 873.00     |
+| 2           | Sara Mohamed  | 3                | Electronics,Grocery,Home & Kitchen| 185.50     |
+| 3           | Mahmoud Nabil | 2                | Grocery,Home & Kitchen            | 36.00      |
 
   
 
