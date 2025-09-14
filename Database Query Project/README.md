@@ -41,7 +41,6 @@ Tables
 
 
 
----
 
 ## 1. categories
 | id | name           |
@@ -130,8 +129,8 @@ Tables
 | customer_id | customer_name | categories_count | categories_list                   | totalspent |
 |-------------|---------------|------------------|-----------------------------------|------------|
 | 1           | Fatma Al-Harbi| 2                | Electronics,Grocery               | 873.00     |
-| 2           | Sara Mohamed  | 3                | Electronics,Grocery,Home & Kitchen| 185.50     |
-| 3           | Mahmoud Nabil | 2                | Grocery,Home & Kitchen            | 36.00      |
+| 2           | Omar Khaled   | 3                | Electronics,Grocery,Home & Kitchen| 185.50     |
+| 3           | Lina Saeed    | 2                | Grocery,Home & Kitchen            | 36.00      |
 
   
 
