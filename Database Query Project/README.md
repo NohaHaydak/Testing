@@ -6,43 +6,42 @@ Return the customers (customer_id, customer_name, categories_count, categories_l
 
 ## Database Schema
 
-<details>
-<summary>Click to expand</summary>
+# Database Tables Structure
 
+```
 Tables
 ├── categories
-│ ├── id
-│ └── name
+│   ├── id
+│   └── name
 ├── customers
-│ ├── id
-│ ├── name
-│ ├── email
-│ └── created_at
+│   ├── id
+│   ├── name
+│   ├── email
+│   └── created_at
 ├── order_items
-│ ├── id
-│ ├── order_id
-│ ├── product_id
-│ ├── quantity
-│ └── unit_price
+│   ├── id
+│   ├── order_id
+│   ├── product_id
+│   ├── quantity
+│   └── unit_price
 ├── orders
-│ ├── id
-│ ├── customer_id
-│ ├── order_date
-│ └── status
+│   ├── id
+│   ├── customer_id
+│   ├── order_date
+│   └── status
 ├── products
-│ ├── id
-│ ├── sku
-│ ├── name
-│ ├── category_id
-│ ├── supplier_id
-│ ├── price
-│ └── stock
+│   ├── id
+│   ├── sku
+│   ├── name
+│   ├── category_id
+│   ├── supplier_id
+│   ├── price
+│   └── stock
 └── suppliers
-├── id
-├── name
-└── country
-
-</details>
+    ├── id
+    ├── name
+    └── country
+```
 
 
 ## 1. categories
