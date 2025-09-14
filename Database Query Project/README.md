@@ -4,42 +4,40 @@ Return the customers(customer_id, customer_name, categories_count, categories_li
 ---
 
 ## SCHEME of the provided data base was as shown below:
----Tables
-        |
-        |--->categories
-        |             |-->id
-        |             |-->name
-        |--->customers
-        |            |-->id
-        |            |-->name
-        |            |-->email
-        |            |-->created_at
-        |--->order_items
-        |              |-->id
-        |              |-->order_id
-        |              |-->product_id
-        |              |-->quantity
-        |              |-->unit_price
-        |--->orders
-        |          |-->id
-        |          |-->customer_id
-        |          |-->order_date
-        |          |-->status
-        |--->products
-        |           |-->id
-        |           |-->sku
-        |           |-->name
-        |           |-->category_id
-        |           |-->suppkier_id
-        |           |-->price
-        |           |-->stock
-        |--->suppliers
-        |            |-->id
-        |            |-->name
-        |            |-->category
-                  
+Tables
+├── categories
+│   ├── id
+│   └── name
+├── customers
+│   ├── id
+│   ├── name
+│   ├── email
+│   └── created_at
+├── order_items
+│   ├── id
+│   ├── order_id
+│   ├── product_id
+│   ├── quantity
+│   └── unit_price
+├── orders
+│   ├── id
+│   ├── customer_id
+│   ├── order_date
+│   └── status
+├── products
+│   ├── id
+│   ├── sku
+│   ├── name
+│   ├── category_id
+│   ├── supplier_id
+│   ├── price
+│   └── stock
+└── suppliers
+    ├── id
+    ├── name
+    └── country
 ---
-  
+
 ## 1. categories
 | id | name           |
 |----|----------------|
