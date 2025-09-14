@@ -4,7 +4,10 @@ Return the customers (customer_id, customer_name, categories_count, categories_l
 
 ---
 
-## SCHEMA of the provided database
+## Database Schema
+
+<details>
+<summary>Click to expand</summary>
 
 Tables
 ├── categories
@@ -39,7 +42,7 @@ Tables
 ├── name
 └── country
 
-
+</details>
 
 
 ## 1. categories
