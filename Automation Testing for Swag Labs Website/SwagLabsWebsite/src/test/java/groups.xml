@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+ <suite name="SauceDemoSuite">
+    <test name="LoginAndHomeTests">
+        <groups>
+        </groups>
+        <classes>
+            <class name="UserCycleTests.LoginTest"/>
+            <class name="UserCycleTests.HomeTest"/>
+        </classes>
+    </test>
+</suite>
