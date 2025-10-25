@@ -6,7 +6,7 @@
         <classes>
             <class name="UserCycleTests.LoginTest"/>
             <class name="UserCycleTests.HomeTest"/>
-
+            <class name="UserCycleTests.LogoutTest"/>
         </classes>
     </test>
 </suite>

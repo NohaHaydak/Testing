@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-@Test(dependsOnMethods = {"LoginTest.validLoginTest1"})
+@Test
 public class LogoutTest extends HomeTest
 {
     //Variables

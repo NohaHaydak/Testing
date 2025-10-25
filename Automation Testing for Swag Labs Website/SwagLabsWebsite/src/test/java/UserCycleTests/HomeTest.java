@@ -40,7 +40,6 @@ public class HomeTest extends BaseTest
     public void setUpClass()
     {
         //Login with valid credentials
-        LoginPage loginPage=new LoginPage(driver);
         action=new Actions(driver);
         homePage=new HomePage(driver,action);
     }
