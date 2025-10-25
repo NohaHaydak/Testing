@@ -1,22 +1,28 @@
 package UserCycleTests;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 @Test(dependsOnMethods = {"LoginTest.validLoginTest1"})
-public class LogoutTest
+public class LogoutTest extends HomeTest
 {
     //Variables
-    WebDriver driver;
-    private HomePage homePage;
-
+    private LogoutPage LogoutPage;
     //Test Cases
     public void logoutTest()
     {
-       /* //Logout
-        homePage=new HomePage(driver);
-        homePage.logout();
-        //Assertions
-        LoginPage loginPage=new LoginPage(driver);
-        Assert.assertTrue(loginPage.isLoginPageDisplayed(), "Logout failed, still not in login page.");*/
+
+        homePage.ClickMenuButton("Logout");
+        Assert.assertTrue(LogoutPage.isLogoutSuccessful(), "Logout failed, still not in login page.");
+
     }
+    @BeforeClass
+    public void setUpClass()
+    {
+        super.setUpClass();
+        LogoutPage=new LogoutPage(driver);
+    }
+
 }
